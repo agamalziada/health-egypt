@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>معدلات الولادة القيصرية في مصر</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#378ADD;--coral:#D85A30;--teal:#1D9E75;--amber:#BA7517;--gray:#888780;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Tajawal",sans-serif;background:#fff;color:#2c2c2a;direction:rtl;}
+  #root{padding:16px 20px 14px;}
+  .hdr{border-right:3px solid #D85A30;padding-right:11px;margin-bottom:10px;}
+  .tag{font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--gray);margin-bottom:2px;}
+  .title{font-size:15px;font-weight:700;line-height:1.4;margin-bottom:2px;}
+  .subtitle{font-size:12px;color:#5f5e5a;}
+  .callout{background:#f1efe8;border-right:3px solid #D85A30;padding:8px 11px;font-size:12px;color:#5f5e5a;line-height:1.6;margin:9px 0;font-style:italic;}
+  .source{font-size:10px;color:var(--gray);margin-top:10px;line-height:1.4;text-align:right;}
+  @media(prefers-color-scheme:dark){body{background:#1a1a18;color:#d3d1c7;}.callout{background:#2c2c2a;color:#b4b2a9;}.subtitle,.source{color:#b4b2a9;}}
+</style>
+</head>
+<body>
+<div id="root">
+
+  <div class="hdr">
+    <p class="tag">زاوية ثالثة · إنفوجرافيك</p>
+    <p class="title">الولادة القيصرية في مصر: واحدة من اثنتين — والعالم يوصي بواحدة من سبع</p>
+    <p class="subtitle">مقارنة المتوسط الوطني المصري بالحد الأقصى الموصى به دولياً</p>
+  </div>
+
+  <div class="callout">"مصر تُجري قيصرياً لكل امرأتين من كل ثلاث — والحد الموصى به عالمياً لا يتجاوز واحدة من كل سبع"</div>
+
+  <!-- بطاقتا المقارنة -->
+  <div style="display:flex;gap:10px;margin-bottom:14px">
+    <div style="flex:1;background:#edf7f3;border-radius:9px;padding:13px 14px;text-align:center">
+      <div style="font-size:11px;color:#0F6E56;margin-bottom:5px;font-weight:600">الحد الأقصى الموصى به</div>
+      <div style="font-size:11px;color:#5f5e5a;margin-bottom:5px">منظمة الصحة العالمية</div>
+      <div id="v1" style="font-size:38px;font-weight:800;color:#1D9E75;line-height:1">0%</div>
+    </div>
+    <div style="flex:1;background:#faece7;border-radius:9px;padding:13px 14px;text-align:center">
+      <div style="font-size:11px;color:#993C1D;margin-bottom:5px;font-weight:600">المتوسط الوطني المصري</div>
+      <div style="font-size:11px;color:#5f5e5a;margin-bottom:5px">2021 — وزارة الصحة</div>
+      <div id="v2" style="font-size:38px;font-weight:800;color:#D85A30;line-height:1">0%</div>
+    </div>
+  </div>
+
+  <!-- شريطا المقارنة البصرية -->
+  <div style="margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+      <span style="font-size:11px;color:#5f5e5a">الحد الموصى به (WHO)</span>
+      <span style="font-size:12px;font-weight:700;color:#1D9E75">15%</span>
+    </div>
+    <div style="height:24px;background:#f1efe8;border-radius:4px;overflow:hidden;margin-bottom:8px">
+      <div id="bar1" style="height:100%;width:0;background:#1D9E75;border-radius:4px;transition:width 1.1s cubic-bezier(.4,0,.2,1)"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+      <span style="font-size:11px;color:#5f5e5a">المتوسط الوطني المصري</span>
+      <span style="font-size:12px;font-weight:700;color:#D85A30">52%</span>
+    </div>
+    <div style="height:24px;background:#f1efe8;border-radius:4px;overflow:hidden">
+      <div id="bar2" style="height:100%;width:0;background:#D85A30;border-radius:4px;transition:width 1.3s cubic-bezier(.4,0,.2,1)"></div>
+    </div>
+  </div>
+
+  <!-- مقياس بارز — 94% كـ callout صادم -->
+  <div style="background:#2c2c2a;border-radius:9px;padding:14px 16px;margin-bottom:4px">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.1em;color:#D85A30;margin-bottom:6px;text-transform:uppercase">⚠ مقياس بارز — بعض مستشفيات القاهرة</div>
+    <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+      <div id="v3" style="font-size:44px;font-weight:800;color:#fff;line-height:1">0%</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.6);line-height:1.5">من كل 100 ولادة<br>تُجرى بالقيصرية<br>في بعض المستشفيات الخاصة</div>
+    </div>
+    <div style="margin-top:10px;height:10px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden">
+      <div id="bar3" style="height:100%;width:0;background:#D85A30;border-radius:3px;transition:width 1.5s cubic-bezier(.4,0,.2,1)"></div>
+    </div>
+    <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:6px">الحد الموصى به: 15% — الفجوة: 79 نقطة مئوية</div>
+  </div>
+
+  <p class="source">المصدر: منظمة الصحة العالمية / وزارة الصحة المصرية / بيانات المستشفيات الخاصة</p>
+</div>
+
+<script>
+(function(){
+  // Count-up animations
+  setTimeout(function(){
+    document.getElementById("bar1").style.width = "15%";
+    document.getElementById("bar2").style.width = "52%";
+    document.getElementById("bar3").style.width = "94%";
+
+    var s=null;
+    function cu(ts){
+      if(!s)s=ts;
+      var p=Math.min((ts-s)/900,1),e=1-Math.pow(1-p,3);
+      document.getElementById("v1").textContent=Math.round(e*15)+"%";
+      document.getElementById("v2").textContent=Math.round(e*52)+"%";
+      document.getElementById("v3").textContent=Math.round(e*94)+"%";
+      if(p<1)requestAnimationFrame(cu);
+      else{
+        document.getElementById("v1").textContent="15%";
+        document.getElementById("v2").textContent="52%";
+        document.getElementById("v3").textContent="94%";
+      }
+    }
+    requestAnimationFrame(cu);
+  },200);
+
+  // Auto-resize
+  setTimeout(function(){
+    var h=document.getElementById("root").offsetHeight;
+    window.parent.postMessage({type:"chartResize",height:h},"*");
+  },1400);
+})();
+</script>
+</body>
+</html>
