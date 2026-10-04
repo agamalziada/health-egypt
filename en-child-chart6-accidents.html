@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Child Worker Transport Disasters: Deaths and Injuries (2019-2022)</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  :root{--blue:#378ADD;--coral:#D85A30;--teal:#1D9E75;--amber:#BA7517;--gray:#888780;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:#2c2c2a;}
+  #root{padding:clamp(12px,3vw,20px);}
+  .hdr{border-left:3px solid #D85A30;padding-left:10px;margin-bottom:10px;}
+  .tag{font-size:clamp(9px,2vw,10px);font-weight:700;letter-spacing:.07em;color:var(--gray);margin-bottom:2px;text-transform:uppercase;}
+  .title{font-size:clamp(13px,3.5vw,15px);font-weight:600;line-height:1.35;margin-bottom:2px;}
+  .subtitle{font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;}
+  .callout{background:#f1efe8;border-left:3px solid #D85A30;padding:8px 11px;font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;line-height:1.55;margin:9px 0;font-style:italic;}
+  .source{font-size:clamp(9px,2vw,10px);color:var(--gray);margin-top:10px;line-height:1.4;}
+  .cards{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+  .card{flex:1;min-width:min(100px,44%);border-radius:8px;padding:clamp(9px,2.5vw,12px) clamp(10px,3vw,13px);}
+  @media(prefers-color-scheme:dark){
+    body{background:#1a1a18;color:#d3d1c7;}
+    .callout{background:#2c2c2a;color:#b4b2a9;}
+    .subtitle,.source{color:#b4b2a9;}
+  }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="hdr">
+    <p class="tag">Zawia3 &middot; Chart 6 of 8</p>
+    <p class="title">Child Worker Transport Disasters: Deaths and Injuries (2019-2022)</p>
+    <p class="subtitle">Five incidents in three years — children in truck beds on the way back from fields</p>
+  </div>
+  <div class="callout">"Five incidents in four governorates over fourteen months — all rural children, all the same method: a truck bed"</div>
+  
+<div style="display:flex;flex-direction:column;gap:7px;margin-bottom:12px">
+  <div style="background:#faece7;border-radius:8px;padding:clamp(9px,2.5vw,11px);border-left:4px solid #D85A30">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-bottom:3px">
+      <p style="font-size:clamp(10px,2.8vw,12px);font-weight:600;color:#2c2c2a">Al-Qasasin road, Ismailia</p>
+      <p style="font-size:clamp(10px,2.5vw,11px);color:#993C1D;font-weight:600">March 2019</p>
+    </div>
+    <p style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a">16 children in truck bed · <strong style="color:#D85A30">1 girl killed + 16 injured</strong> · farm workers</p>
+  </div>
+  <div style="background:#faece7;border-radius:8px;padding:clamp(9px,2.5vw,11px);border-left:4px solid #D85A30">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-bottom:3px">
+      <p style="font-size:clamp(10px,2.8vw,12px);font-weight:600;color:#2c2c2a">Upper Egypt desert road</p>
+      <p style="font-size:clamp(10px,2.5vw,11px);color:#993C1D;font-weight:600">May 2021</p>
+    </div>
+    <p style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a"><strong style="color:#D85A30">2 killed + 21 injured</strong> · farm workers</p>
+  </div>
+  <div style="background:#faece7;border-radius:8px;padding:clamp(9px,2.5vw,11px);border-left:4px solid #D85A30">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-bottom:3px">
+      <p style="font-size:clamp(10px,2.8vw,12px);font-weight:600;color:#2c2c2a">Al-Dawaris junction, Ismailia</p>
+      <p style="font-size:clamp(10px,2.5vw,11px);color:#993C1D;font-weight:600">December 2021</p>
+    </div>
+    <p style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a">Children aged 10-15 · <strong style="color:#D85A30">2 killed + 24 injured</strong> · onion harvest</p>
+  </div>
+  <div style="background:#2c2c2a;border-radius:8px;padding:clamp(9px,2.5vw,11px);border-left:4px solid #D85A30">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-bottom:3px">
+      <p style="font-size:clamp(10px,2.8vw,12px);font-weight:600;color:#fff">Talia ferry, Menoufia</p>
+      <p style="font-size:clamp(10px,2.5vw,11px);color:#D85A30;font-weight:600">January 2022</p>
+    </div>
+    <p style="font-size:clamp(9px,2.2vw,10px);color:rgba(255,255,255,.75)">23 passengers (mostly children) · <strong style="color:#D85A30">7 children + 1 young man killed, 14 survived</strong> · poultry farm</p>
+  </div>
+  <div style="background:#faece7;border-radius:8px;padding:clamp(9px,2.5vw,11px);border-left:4px solid #D85A30">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;margin-bottom:3px">
+      <p style="font-size:clamp(10px,2.8vw,12px);font-weight:600;color:#2c2c2a">Al-Sawalim canal, Beheira</p>
+      <p style="font-size:clamp(10px,2.5vw,11px);color:#993C1D;font-weight:600">April 2022</p>
+    </div>
+    <p style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a">14 children · <strong style="color:#D85A30">8 children killed</strong> · potato station</p>
+  </div>
+</div>
+<div style="background:#f1efe8;border-radius:7px;padding:9px 12px;text-align:center">
+  <p style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a">Total deaths across all five incidents: <strong style="color:#D85A30">at least 20</strong>, most under the age of 15</p>
+</div>
+  <p class="source">Source: Multiple journalistic sources / security investigation reports</p>
+</div>
+<script>
+(function(){
+  function notify(){var h=document.getElementById("root").offsetHeight;window.parent.postMessage({type:"chartResize",height:h},"*");}
+  setTimeout(notify,1400);window.addEventListener("resize",notify);
+  try{new ResizeObserver(function(){setTimeout(notify,80);}).observe(document.body);}catch(e){}
+})();
+</script>
+</body></html>

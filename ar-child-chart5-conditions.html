@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>خصائص عمالة الأطفال في مصر — ظروف العمل والساعات والجنس</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#378ADD;--coral:#D85A30;--teal:#1D9E75;--amber:#BA7517;--gray:#888780;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:"Tajawal",sans-serif;background:#fff;color:#2c2c2a;direction:rtl;}
+  #root{padding:clamp(12px,3vw,20px);}
+  .hdr{border-right:3px solid #D85A30;padding-right:10px;margin-bottom:10px;}
+  .tag{font-size:clamp(9px,2vw,10px);font-weight:700;letter-spacing:.06em;color:var(--gray);margin-bottom:2px;}
+  .title{font-size:clamp(13px,3.5vw,15px);font-weight:700;line-height:1.4;margin-bottom:2px;}
+  .subtitle{font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;}
+  .callout{background:#f1efe8;border-right:3px solid #D85A30;padding:8px 11px;font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;line-height:1.6;margin:9px 0;font-style:italic;}
+  .source{font-size:clamp(9px,2vw,10px);color:var(--gray);margin-top:10px;line-height:1.4;text-align:right;}
+  .cards{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+  .card{flex:1;min-width:min(100px,44%);border-radius:8px;padding:clamp(9px,2.5vw,12px) clamp(10px,3vw,13px);}
+  @media(prefers-color-scheme:dark){
+    body{background:#1a1a18;color:#d3d1c7;}
+    .callout{background:#2c2c2a;color:#b4b2a9;}
+    .subtitle,.source{color:#b4b2a9;}
+  }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="hdr">
+    <p class="tag">زاوية ثالثة · إنفوجرافيك ⑤ من ⑧</p>
+    <p class="title">خصائص عمالة الأطفال في مصر — ظروف العمل والساعات والجنس</p>
+    <p class="subtitle">4 من كل 5 أطفال عاملين في ظروف غير آمنة</p>
+  </div>
+  <div class="callout">"82.2% من الأطفال العاملين في ظروف سيئة وغير آمنة — و16.9% يعملون أكثر من 6 ساعات يوميًا"</div>
+  
+<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px">
+  <div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+      <span style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a;font-weight:600">يعملون في ظروف سيئة وغير آمنة</span>
+      <span style="font-size:clamp(12px,3vw,14px);font-weight:800;color:#D85A30">82.2%</span>
+    </div>
+    <div style="height:26px;background:#f1efe8;border-radius:4px;overflow:hidden">
+      <div id="b1" style="height:100%;width:0;background:#D85A30;border-radius:4px;transition:width 1.1s ease;display:flex;align-items:center;padding-right:8px">
+        <span style="font-size:10px;font-weight:700;color:#fff;white-space:nowrap">82.2% — 4 من كل 5</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+      <span style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a;font-weight:600">يعملون أكثر من 6 ساعات يوميًا</span>
+      <span style="font-size:clamp(12px,3vw,14px);font-weight:800;color:#BA7517">16.9%</span>
+    </div>
+    <div style="height:26px;background:#f1efe8;border-radius:4px;overflow:hidden">
+      <div id="b2" style="height:100%;width:0;background:#BA7517;border-radius:4px;transition:width 1.3s ease;display:flex;align-items:center;padding-right:8px">
+        <span style="font-size:10px;font-weight:700;color:#fff;white-space:nowrap">16.9%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="background:#f1efe8;border-radius:8px;padding:clamp(9px,2.5vw,12px);margin-bottom:10px">
+  <p style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a;margin-bottom:7px;font-weight:600">التوزيع بحسب الجنس</p>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+    <span style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a;white-space:nowrap;min-width:clamp(50px,14vw,65px)">ذكور (~71%)</span>
+    <div style="flex:1;height:20px;background:#e0ddd6;border-radius:3px;overflow:hidden">
+      <div id="b3" style="height:100%;width:0;background:#378ADD;border-radius:3px;transition:width 1.1s ease"></div>
+    </div>
+    <span style="font-size:clamp(11px,2.8vw,12px);font-weight:700;color:#378ADD">71%</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <span style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a;white-space:nowrap;min-width:clamp(50px,14vw,65px)">إناث (~29%)</span>
+    <div style="flex:1;height:20px;background:#e0ddd6;border-radius:3px;overflow:hidden">
+      <div id="b4" style="height:100%;width:0;background:#BA7517;border-radius:3px;transition:width 1.3s ease"></div>
+    </div>
+    <span style="font-size:clamp(11px,2.8vw,12px);font-weight:700;color:#BA7517">29%</span>
+  </div>
+</div>
+<script>
+(function(){
+  setTimeout(function(){
+    document.getElementById("b1").style.width="82.2%";
+    document.getElementById("b2").style.width="16.9%";
+    document.getElementById("b3").style.width="71%";
+    document.getElementById("b4").style.width="29%";
+  },200);
+})();
+</script>
+  <p class="source">المصدر: المسح القومي لعمل الأطفال 2010 — الجهاز المركزي ومنظمة العمل الدولية</p>
+</div>
+<script>
+(function(){
+  function notify(){var h=document.getElementById("root").offsetHeight;window.parent.postMessage({type:"chartResize",height:h},"*");}
+  setTimeout(notify,1400);window.addEventListener("resize",notify);
+  try{new ResizeObserver(function(){setTimeout(notify,80);}).observe(document.body);}catch(e){}
+})();
+</script>
+</body></html>

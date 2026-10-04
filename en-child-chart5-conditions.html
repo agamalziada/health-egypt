@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Working Conditions for Child Laborers in Egypt</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  :root{--blue:#378ADD;--coral:#D85A30;--teal:#1D9E75;--amber:#BA7517;--gray:#888780;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:#2c2c2a;}
+  #root{padding:clamp(12px,3vw,20px);}
+  .hdr{border-left:3px solid #D85A30;padding-left:10px;margin-bottom:10px;}
+  .tag{font-size:clamp(9px,2vw,10px);font-weight:700;letter-spacing:.07em;color:var(--gray);margin-bottom:2px;text-transform:uppercase;}
+  .title{font-size:clamp(13px,3.5vw,15px);font-weight:600;line-height:1.35;margin-bottom:2px;}
+  .subtitle{font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;}
+  .callout{background:#f1efe8;border-left:3px solid #D85A30;padding:8px 11px;font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;line-height:1.55;margin:9px 0;font-style:italic;}
+  .source{font-size:clamp(9px,2vw,10px);color:var(--gray);margin-top:10px;line-height:1.4;}
+  .cards{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+  .card{flex:1;min-width:min(100px,44%);border-radius:8px;padding:clamp(9px,2.5vw,12px) clamp(10px,3vw,13px);}
+  @media(prefers-color-scheme:dark){
+    body{background:#1a1a18;color:#d3d1c7;}
+    .callout{background:#2c2c2a;color:#b4b2a9;}
+    .subtitle,.source{color:#b4b2a9;}
+  }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="hdr">
+    <p class="tag">Zawia3 &middot; Chart 5 of 8</p>
+    <p class="title">Working Conditions for Child Laborers in Egypt</p>
+    <p class="subtitle">4 in 5 working children are in unsafe conditions</p>
+  </div>
+  <div class="callout">"82.2% of working children are in poor and unsafe conditions — and 16.9% work more than 6 hours a day"</div>
+  
+<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px">
+  <div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+      <span style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a;font-weight:600">Working in poor and unsafe conditions</span>
+      <span style="font-size:clamp(12px,3vw,14px);font-weight:800;color:#D85A30">82.2%</span>
+    </div>
+    <div style="height:26px;background:#f1efe8;border-radius:4px;overflow:hidden">
+      <div id="b1" style="height:100%;width:0;background:#D85A30;border-radius:4px;transition:width 1.1s ease;display:flex;align-items:center;padding-left:8px">
+        <span style="font-size:10px;font-weight:700;color:#fff;white-space:nowrap">82.2% — 4 in every 5</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:5px">
+      <span style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a;font-weight:600">Working more than 6 hours per day</span>
+      <span style="font-size:clamp(12px,3vw,14px);font-weight:800;color:#BA7517">16.9%</span>
+    </div>
+    <div style="height:26px;background:#f1efe8;border-radius:4px;overflow:hidden">
+      <div id="b2" style="height:100%;width:0;background:#BA7517;border-radius:4px;transition:width 1.3s ease;display:flex;align-items:center;padding-left:8px">
+        <span style="font-size:10px;font-weight:700;color:#fff;white-space:nowrap">16.9%</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="background:#f1efe8;border-radius:8px;padding:clamp(9px,2.5vw,12px);margin-bottom:10px">
+  <p style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a;margin-bottom:7px;font-weight:600">Gender breakdown</p>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+    <span style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a;white-space:nowrap;min-width:clamp(65px,18vw,85px)">Male (~71%)</span>
+    <div style="flex:1;height:20px;background:#e0ddd6;border-radius:3px;overflow:hidden">
+      <div id="b3" style="height:100%;width:0;background:#378ADD;border-radius:3px;transition:width 1.1s ease"></div>
+    </div>
+    <span style="font-size:clamp(11px,2.8vw,12px);font-weight:700;color:#378ADD">71%</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <span style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a;white-space:nowrap;min-width:clamp(65px,18vw,85px)">Female (~29%)</span>
+    <div style="flex:1;height:20px;background:#e0ddd6;border-radius:3px;overflow:hidden">
+      <div id="b4" style="height:100%;width:0;background:#BA7517;border-radius:3px;transition:width 1.3s ease"></div>
+    </div>
+    <span style="font-size:clamp(11px,2.8vw,12px);font-weight:700;color:#BA7517">29%</span>
+  </div>
+</div>
+<script>
+(function(){
+  setTimeout(function(){
+    document.getElementById("b1").style.width="82.2%";
+    document.getElementById("b2").style.width="16.9%";
+    document.getElementById("b3").style.width="71%";
+    document.getElementById("b4").style.width="29%";
+  },200);
+})();
+</script>
+  <p class="source">Source: National Child Labor Survey 2010 — CAPMAS & ILO</p>
+</div>
+<script>
+(function(){
+  function notify(){var h=document.getElementById("root").offsetHeight;window.parent.postMessage({type:"chartResize",height:h},"*");}
+  setTimeout(notify,1400);window.addEventListener("resize",notify);
+  try{new ResizeObserver(function(){setTimeout(notify,80);}).observe(document.body);}catch(e){}
+})();
+</script>
+</body></html>

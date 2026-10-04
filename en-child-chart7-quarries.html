@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Child Injuries at Minya Quarries: What Gets Recorded, Not What Stays Hidden</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  :root{--blue:#378ADD;--coral:#D85A30;--teal:#1D9E75;--amber:#BA7517;--gray:#888780;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:#2c2c2a;}
+  #root{padding:clamp(12px,3vw,20px);}
+  .hdr{border-left:3px solid #D85A30;padding-left:10px;margin-bottom:10px;}
+  .tag{font-size:clamp(9px,2vw,10px);font-weight:700;letter-spacing:.07em;color:var(--gray);margin-bottom:2px;text-transform:uppercase;}
+  .title{font-size:clamp(13px,3.5vw,15px);font-weight:600;line-height:1.35;margin-bottom:2px;}
+  .subtitle{font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;}
+  .callout{background:#f1efe8;border-left:3px solid #D85A30;padding:8px 11px;font-size:clamp(11px,2.5vw,12px);color:#5f5e5a;line-height:1.55;margin:9px 0;font-style:italic;}
+  .source{font-size:clamp(9px,2vw,10px);color:var(--gray);margin-top:10px;line-height:1.4;}
+  .cards{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+  .card{flex:1;min-width:min(100px,44%);border-radius:8px;padding:clamp(9px,2.5vw,12px) clamp(10px,3vw,13px);}
+  @media(prefers-color-scheme:dark){
+    body{background:#1a1a18;color:#d3d1c7;}
+    .callout{background:#2c2c2a;color:#b4b2a9;}
+    .subtitle,.source{color:#b4b2a9;}
+  }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="hdr">
+    <p class="tag">Zawia3 &middot; Chart 7 of 8</p>
+    <p class="title">Child Injuries at Minya Quarries: What Gets Recorded, Not What Stays Hidden</p>
+    <p class="subtitle">One rural health unit registers 30-40 child injuries per month</p>
+  </div>
+  <div class="callout">"30 to 40 injured children every month in a single health unit in Diaba village — that is what is recorded, not what remains hidden"</div>
+  
+<div style="text-align:center;background:#faece7;border-radius:10px;padding:clamp(14px,4vw,20px);margin-bottom:14px">
+  <p style="font-size:clamp(10px,2.5vw,11px);color:#5f5e5a;margin-bottom:4px">Child injuries per month at a single health unit (Diaba village)</p>
+  <div style="font-size:clamp(38px,10vw,52px);font-weight:800;color:#D85A30;line-height:1">30–40</div>
+  <p style="font-size:clamp(14px,4vw,17px);font-weight:700;color:#D85A30;margin-top:3px">children / month</p>
+</div>
+<div class="cards" style="margin-bottom:12px">
+  <div class="card" style="background:#faece7">
+    <p style="font-size:clamp(9px,2.2vw,10px);color:#993C1D;margin-bottom:2px">Lacerations (ARIJ sample)</p>
+    <p style="font-size:clamp(18px,5vw,22px);font-weight:800;color:#D85A30">84%</p>
+    <p style="font-size:clamp(9px,2vw,10px);color:#888780;margin-top:1px">of children in the sample</p>
+  </div>
+  <div class="card" style="background:#f1efe8">
+    <p style="font-size:clamp(9px,2.2vw,10px);color:#5f5e5a;margin-bottom:2px">Children logged (union, 2019)</p>
+    <p style="font-size:clamp(18px,5vw,22px);font-weight:800;color:#888780">115 children</p>
+    <p style="font-size:clamp(9px,2vw,10px);color:#888780;margin-top:1px">workers union census</p>
+  </div>
+  <div class="card" style="background:#faece7">
+    <p style="font-size:clamp(9px,2.2vw,10px);color:#993C1D;margin-bottom:2px">Children 15-18 in Minya quarries</p>
+    <p style="font-size:clamp(18px,5vw,22px);font-weight:800;color:#D85A30">16,000+</p>
+    <p style="font-size:clamp(9px,2vw,10px);color:#888780;margin-top:1px">children (2014 census)</p>
+  </div>
+</div>
+<div style="background:#2c2c2a;border-radius:7px;padding:9px 12px">
+  <p style="font-size:clamp(11px,2.8vw,12px);color:rgba(255,255,255,.8)">&#9888; What a single health unit records in one month nearly matches the total pulled from the worst forms of child labor by the <strong style="color:#D85A30">entire international project over two years</strong></p>
+</div>
+  <p class="source">Source: ARIJ Network investigation 2022 / Wadi El-Nil Foundation / Al-Shorouk investigation 2014</p>
+</div>
+<script>
+(function(){
+  function notify(){var h=document.getElementById("root").offsetHeight;window.parent.postMessage({type:"chartResize",height:h},"*");}
+  setTimeout(notify,1400);window.addEventListener("resize",notify);
+  try{new ResizeObserver(function(){setTimeout(notify,80);}).observe(document.body);}catch(e){}
+})();
+</script>
+</body></html>
